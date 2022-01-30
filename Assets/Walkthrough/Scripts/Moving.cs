@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Moving : NetworkBehaviour
 {
-
+    public float RotateSpeed = 150f;
     public float MoveSpeed = 5f;
     private CharacterController _characterController;
     private Animating _animating;
@@ -22,7 +22,9 @@ public class Moving : NetworkBehaviour
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 offset = new Vector3(horizontal, Physics.gravity.y, vertical) * (MoveSpeed * Time.deltaTime);
+        transform.Rotate(new Vector3(0f, horizontal * RotateSpeed * Time.deltaTime));
+        Vector3 offset = new Vector3(0f, Physics.gravity.y, vertical) * (MoveSpeed * Time.deltaTime);
+        offset = transform.TransformDirection(offset);
 
         _characterController.Move(offset);
 
