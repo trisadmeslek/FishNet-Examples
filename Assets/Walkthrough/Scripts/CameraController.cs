@@ -9,6 +9,11 @@ public class CameraController : MonoBehaviour
         FirstObjectNotifier.OnFirstObjectSpawned += FirstObjectNotifier_OnFirstObjectSpawned;
     }
 
+    private void OnDestroy()
+    {
+        FirstObjectNotifier.OnFirstObjectSpawned -= FirstObjectNotifier_OnFirstObjectSpawned;
+    }
+
     /// <summary>
     /// Called when the local clients first object spawns.
     /// </summary>
