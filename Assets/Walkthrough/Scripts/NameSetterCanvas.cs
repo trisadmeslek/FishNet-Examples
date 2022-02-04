@@ -16,3 +16,4 @@ public class NameSetterCanvas : MonoBehaviour
         PlayerNameTracker.SetName(text);
     }
 } 
+ 

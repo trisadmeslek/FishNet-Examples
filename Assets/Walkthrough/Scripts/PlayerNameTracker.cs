@@ -1,10 +1,8 @@
 using FishNet.Connection;
-using FishNet.Managing.Logging;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
 using FishNet.Transporting;
 using System;
-using UnityEngine;
 
 /// <summary>
 /// Lets players set their name and synchronizes it to others.
@@ -68,7 +66,6 @@ public class PlayerNameTracker : NetworkBehaviour
     /// </summary>
     public static string GetPlayerName(NetworkConnection conn)
     {
-        Debug.Log(_instance._playerNames.Count);
         if (_instance._playerNames.TryGetValue(conn, out string result))
             return result;
         else
