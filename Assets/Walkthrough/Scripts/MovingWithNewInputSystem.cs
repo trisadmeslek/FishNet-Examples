@@ -10,6 +10,7 @@ public class MovingWithNewInputSystem : NetworkBehaviour
     private PlayerInputActions _inputActions;
     private Vector2 _movement = Vector2.zero;
     private bool _jumpPressed = false;
+    private bool _ignoreInputs => !base.IsOwner || !Application.isFocused;
 
     private void Awake()
     {
@@ -36,29 +37,28 @@ public class MovingWithNewInputSystem : NetworkBehaviour
 
     private void Movement_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        if (!Application.isFocused)
+        if (_ignoreInputs)
             return;
         _movement = obj.ReadValue<Vector2>();
     }
 
     private void Movement_canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        if (!Application.isFocused)
+        if (_ignoreInputs)
             return;
         _movement = Vector2.zero;
     }
 
     private void Jump_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        if (!Application.isFocused)
+        if (_ignoreInputs)
             return;
         _jumpPressed = obj.ReadValueAsButton();
     }
 
-
     private void Update()
     {
-        if (!base.IsOwner || !Application.isFocused)
+        if (_ignoreInputs)
             return;
 
         transform.Rotate(new Vector3(0f, _movement.x * RotateSpeed * Time.deltaTime));
