@@ -156,11 +156,11 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_ActionsAsset: {fileID: -944628639613478452, guid: a4e052b22bb57d34799e6cc070a1ff92, type: 3}
-  m_PointAction: {fileID: 0}
-  m_MoveAction: {fileID: 0}
-  m_SubmitAction: {fileID: 0}
-  m_CancelAction: {fileID: 0}
-  m_LeftClickAction: {fileID: 0}
+  m_PointAction: {fileID: 5966253212451024189, guid: a4e052b22bb57d34799e6cc070a1ff92, type: 3}
+  m_MoveAction: {fileID: 5966253212451024189, guid: a4e052b22bb57d34799e6cc070a1ff92, type: 3}
+  m_SubmitAction: {fileID: -2090338261947688901, guid: a4e052b22bb57d34799e6cc070a1ff92, type: 3}
+  m_CancelAction: {fileID: -3944565299291195674, guid: a4e052b22bb57d34799e6cc070a1ff92, type: 3}
+  m_LeftClickAction: {fileID: 3112439919601914187, guid: a4e052b22bb57d34799e6cc070a1ff92, type: 3}
   m_MiddleClickAction: {fileID: 0}
   m_RightClickAction: {fileID: 0}
   m_ScrollWheelAction: {fileID: 0}
@@ -1158,7 +1158,7 @@ GameObject:
   - component: {fileID: 1859408374}
   - component: {fileID: 1859408373}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
