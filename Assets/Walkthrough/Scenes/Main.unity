@@ -150,16 +150,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 361034275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_ActionsAsset: {fileID: -944628639613478452, guid: a4e052b22bb57d34799e6cc070a1ff92, type: 3}
+  m_PointAction: {fileID: 0}
+  m_MoveAction: {fileID: 0}
+  m_SubmitAction: {fileID: 0}
+  m_CancelAction: {fileID: 0}
+  m_LeftClickAction: {fileID: 0}
+  m_MiddleClickAction: {fileID: 0}
+  m_RightClickAction: {fileID: 0}
+  m_ScrollWheelAction: {fileID: 0}
+  m_TrackedDevicePositionAction: {fileID: 0}
+  m_TrackedDeviceOrientationAction: {fileID: 0}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &361034277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,6 +347,8 @@ MonoBehaviour:
   _sceneId: 99294407885487361
   _sceneNetworkObjects:
   - {fileID: 468546149}
+  _networkBehaviours:
+  - {fileID: 468546150}
   SceneTransformProperties:
     Position: {x: -24.699217, y: 5.523036, z: -29.26488}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
@@ -357,7 +367,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9c88eec32df2d4f8d4e3384f312845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 0
   _addedNetworkObject: {fileID: 468546149}
+  _networkObjectCache: {fileID: 468546149}
 --- !u!4 &468546151
 Transform:
   m_ObjectHideFlags: 0
@@ -1135,6 +1147,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780162920}
   m_CullTransparentMesh: 1
+--- !u!1 &1859408372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1859408374}
+  - component: {fileID: 1859408373}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1859408373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859408372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: a4e052b22bb57d34799e6cc070a1ff92, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 361034276}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 1597960362}
+--- !u!4 &1859408374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859408372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 707.3456, y: 146.1404, z: -475.53717}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2038158967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,7 +1326,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1424052073840989859
 MonoBehaviour:
@@ -1302,7 +1375,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1723230302499263084
 Transform:
@@ -1836,7 +1909,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &4690146951529724018
 BoxCollider:
@@ -1931,7 +2004,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &4690146952601255052
 BoxCollider:
@@ -2043,7 +2116,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &4783084577289433884
 BoxCollider:
@@ -2109,7 +2182,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!33 &5299589579988269202
 MeshFilter:
@@ -2281,11 +2354,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _logging: {fileID: 0}
-  _spawnablePrefabs: {fileID: 11400000, guid: 2a78f17798f171341b27f2e5d78b74e3, type: 2}
+  _spawnablePrefabs: {fileID: 11400000, guid: ec64eb18c93ab344892891f33edbf82a, type: 2}
   _refreshDefaultPrefabs: 1
   _runInBackground: 1
   _dontDestroyOnLoad: 1
   _persistence: 0
+  _incomingIterationOrder: 1
+  _outgoingIterationOrder: 0
 --- !u!4 &7443408886421499938
 Transform:
   m_ObjectHideFlags: 0
@@ -2313,8 +2388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211a9f6ec51ddc14f908f5acc0cd0423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerPrefab: {fileID: 106288172138341511, guid: e2bbc2e10ca72ff4d81edaa48d81c723,
-    type: 3}
+  _playerPrefab: {fileID: 106288172138341511, guid: e2bbc2e10ca72ff4d81edaa48d81c723, type: 3}
+  _addToDefaultScene: 1
   _spawns: []
 --- !u!23 &8140740353476237474
 MeshRenderer:
@@ -2415,7 +2490,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &9139860295620301144
 RectTransform:
