@@ -16,10 +16,22 @@ public class MovingWithNewInputSystem : NetworkBehaviour
         _characterController = GetComponent<CharacterController>();
         _animating = GetComponent<Animating>();
         _inputActions = new PlayerInputActions();
+    }
+
+    private void OnEnable()
+    {
         _inputActions.Enable();
         _inputActions.Player.Movement.performed += Movement_performed;
         _inputActions.Player.Movement.canceled += Movement_canceled;
         _inputActions.Player.Jump.performed += Jump_performed;
+    }
+
+    private void OnDisable()
+    {
+        _inputActions.Player.Movement.performed -= Movement_performed;
+        _inputActions.Player.Movement.canceled -= Movement_canceled;
+        _inputActions.Player.Jump.performed -= Jump_performed;
+        _inputActions.Disable();
     }
 
     private void Movement_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
