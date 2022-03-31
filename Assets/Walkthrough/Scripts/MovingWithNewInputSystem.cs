@@ -55,6 +55,7 @@ public class MovingWithNewInputSystem : NetworkBehaviour
         _jumpPressed = obj.ReadValueAsButton();
     }
 
+
     private void Update()
     {
         if (!base.IsOwner || !Application.isFocused)
