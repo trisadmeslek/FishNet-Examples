@@ -60,7 +60,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -85,7 +84,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &2319682854123502714
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -128,29 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2836e36774ca1c4bbbee976e17b649c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 0
-  _addedNetworkObject: {fileID: 2319682854123502718}
-  _networkObjectCache: {fileID: 2319682854123502718}
-  _compress: 1
-  _synchronizeParent: 0
-  _interpolation: 2
-  _extrapolation: 0
+  _compressSmall: 1
   _enableTeleport: 0
   _teleportThreshold: 0
   _clientAuthoritative: 0
   _sendToOwner: 0
-  _positionSnapping:
-    X: 0
-    Y: 0
-    Z: 0
-  _rotationSnapping:
-    X: 0
-    Y: 0
-    Z: 0
-  _scaleSnapping:
-    X: 0
-    Y: 0
-    Z: 0
 --- !u!114 &2319682854123502718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,15 +149,11 @@ MonoBehaviour:
   _sceneId: 0
   _sceneNetworkObjects:
   - {fileID: 2319682854123502718}
-  _networkBehaviours:
-  - {fileID: 2319682854123502716}
-  - {fileID: -1993511873309273852}
   SceneTransformProperties:
     Position: {x: 0, y: 0, z: 0}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
     LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
-  ChildNetworkObjects: []
 --- !u!114 &-1993511873309273852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +166,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db802fa48b9874240b9742d24cfe17ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 1
-  _addedNetworkObject: {fileID: 2319682854123502718}
-  _networkObjectCache: {fileID: 2319682854123502718}
   MoveRate: 30

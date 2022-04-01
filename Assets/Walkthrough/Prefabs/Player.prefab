@@ -70,9 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3baa8a342393e149b7ee342827016a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 0
   _addedNetworkObject: {fileID: 106288172138341511}
-  _networkObjectCache: {fileID: 106288172138341511}
   RotateSpeed: 150
   MoveSpeed: 5
 --- !u!114 &106288172138341511
@@ -88,18 +86,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NetworkObserver: {fileID: 0}
-  _prefabId: 4
+  _prefabId: 8
   _scenePathHash: 0
   _sceneId: 0
   _sceneNetworkObjects:
   - {fileID: 106288172138341511}
-  _networkBehaviours:
-  - {fileID: 106288172138341510}
-  - {fileID: 0}
-  - {fileID: 4924704081033154191}
-  - {fileID: -6967467201534426853}
-  - {fileID: 4327809432728639008}
-  - {fileID: 3886827997641226798}
   SceneTransformProperties:
     Position: {x: 0.6908932, y: 2.23, z: -10.650206}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
@@ -118,9 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2836e36774ca1c4bbbee976e17b649c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 2
   _addedNetworkObject: {fileID: 106288172138341511}
-  _networkObjectCache: {fileID: 106288172138341511}
   _compress: 1
   _synchronizeParent: 0
   _interpolation: 2
@@ -184,9 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8cac635f24954048aad3a6ff9110beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 3
   _addedNetworkObject: {fileID: 106288172138341511}
-  _networkObjectCache: {fileID: 106288172138341511}
   IgnoredParameters: []
   _animator: {fileID: 213984940}
   _smoothFloats: 1
@@ -205,9 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ea58410fc3f73498d205517512177c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 4
   _addedNetworkObject: {fileID: 106288172138341511}
-  _networkObjectCache: {fileID: 106288172138341511}
 --- !u!1 &3008959236327998570
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,9 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abcac2319fffe1e4484dcbbaa6c00e8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 5
   _addedNetworkObject: {fileID: 106288172138341511}
-  _networkObjectCache: {fileID: 106288172138341511}
   _text: {fileID: 6676287354785153618}
 --- !u!1 &4666051465567237996
 GameObject:
